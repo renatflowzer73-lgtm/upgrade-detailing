@@ -204,30 +204,6 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
   max-width: none;
   filter: brightness(3) contrast(1.6) grayscale(1);
 }
-.badge-focus {
-  --c: rgba(255, 69, 82, .95);
-  left: 15.2%; top: 49.2%; width: 11.5%; aspect-ratio: 1.75;
-  translate: -50% -50%;
-  background:
-    linear-gradient(var(--c), var(--c)) 0 0 / 14px 1.5px, linear-gradient(var(--c), var(--c)) 0 0 / 1.5px 14px,
-    linear-gradient(var(--c), var(--c)) 100% 0 / 14px 1.5px, linear-gradient(var(--c), var(--c)) 100% 0 / 1.5px 14px,
-    linear-gradient(var(--c), var(--c)) 0 100% / 14px 1.5px, linear-gradient(var(--c), var(--c)) 0 100% / 1.5px 14px,
-    linear-gradient(var(--c), var(--c)) 100% 100% / 14px 1.5px, linear-gradient(var(--c), var(--c)) 100% 100% / 1.5px 14px;
-  background-repeat: no-repeat;
-}
-.badge-focus i {
-  position: absolute; left: 100%; top: 0;
-  width: 3.4vw; height: 1.5px; background: var(--c);
-  transform-origin: left; rotate: -35deg;
-}
-.badge-focus::after {
-  content: "Audi Q5 · матовый чёрный";
-  position: absolute; left: calc(100% + 2.6vw); bottom: calc(100% + 1.6vw);
-  white-space: nowrap;
-  font: 500 12px/1 var(--body); letter-spacing: .1em; text-transform: uppercase;
-  color: #fff; padding: 8px 12px; border-radius: 999px;
-  background: rgba(10,10,11,.7); border: 1px solid rgba(255, 69, 82, .6);
-}
 
 .hero-vignette {
   position: absolute; inset: 0;
@@ -276,9 +252,6 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
 .js .wall         { animation: wall-on 1.4s var(--ease) 1.5s both, breathe 6s ease-in-out 3.4s infinite; }
 .js .badge-glow   { animation: badge-glow 1.6s var(--ease) 1.55s both; }
 .js .badge-shine  { animation: shine 1.3s cubic-bezier(.5, 0, .3, 1) 1.65s both, shine 1.3s cubic-bezier(.5, 0, .3, 1) 7s infinite; }
-.js .badge-focus  { animation: focus-in .7s var(--ease) 2.1s both; }
-.js .badge-focus i { animation: draw .5s var(--ease) 2.55s both; }
-.js .badge-focus::after { animation: fade-up .7s var(--ease) 2.75s both; }
 .js .hero-title .line > span { animation: rise 1.25s var(--ease) both; }
 .js .hero-title .line:nth-child(1) > span { animation-delay: 1.85s; }
 .js .hero-title .line:nth-child(2) > span { animation-delay: 1.98s; }
@@ -315,8 +288,6 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
   from { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
   to   { -webkit-mask-position: 0% 0; mask-position: 0% 0; }
 }
-@keyframes focus-in { from { opacity: 0; scale: 1.5; } to { opacity: 1; scale: 1; } }
-@keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes wall-on { from { opacity: 0; } to { opacity: 1; } }
 @keyframes breathe { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
 @keyframes rise { from { transform: translateY(135%); } to { transform: none; } }
@@ -508,7 +479,6 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
   .wall { left: -10%; width: 110%; top: 4%; height: 50%; }
   .softbox-l { left: -4%; width: 60%; }
   .softbox-r { left: 50%; width: 60%; }
-  .badge-focus { display: none; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
