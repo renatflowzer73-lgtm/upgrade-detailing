@@ -1,0 +1,13 @@
+# local tooling and design notes
+.claude/
+.impeccable/
+PRODUCT.md
+
+# unused source images
+assets/hero.jpg
+assets/svc-film.jpg
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
