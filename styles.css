@@ -508,7 +508,7 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
   .wall { left: -10%; width: 110%; top: 4%; height: 50%; }
   .softbox-l { left: -4%; width: 60%; }
   .softbox-r { left: 50%; width: 60%; }
-  .badge-focus i, .badge-focus::after { display: none; }
+  .badge-focus { display: none; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
