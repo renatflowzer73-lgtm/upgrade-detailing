@@ -499,3 +499,6 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+.footer-credit { font-size: 12px; }
+.footer-credit a { text-decoration: underline; text-underline-offset: 3px; }
+.footer-credit a:hover { color: var(--text); }
